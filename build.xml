@@ -6,8 +6,8 @@
 	
     <target name="compile" depends="clean">
     	<mkdir dir="build/classes"/>    	
-        <javac sourcepath="D:\работа\own\eclipse\Travis-Olga" srcdir="src" destdir="build/classes">
-        	<include name="**/*.java"/>
+        <javac sourcepath="D:\eclipseMy\eclipse\eclipse-workspace\myProject1" srcdir="src" destdir="build/classes">
+         	<include name="**/*.java"/>
         </javac>
     </target>
 
@@ -15,7 +15,7 @@
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/Exercise.jar" basedir="build/classes">
             <manifest>
-                <attribute name="Main-Class" value="com.ibm.minsk.test.Exercise"/>
+                <attribute name="Main-Class" value="myProject1.myClass1"/>
             </manifest>
         </jar>
     </target>
