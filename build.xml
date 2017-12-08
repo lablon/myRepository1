@@ -15,7 +15,7 @@
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/Exercise.jar" basedir="build/classes">
             <manifest>
-                <attribute name="Main-Class" value="myProject1\myClass1"/>
+                <attribute name="Main-Class" value="myProject1.myClass1"/>
             </manifest>
         </jar>
     </target>
