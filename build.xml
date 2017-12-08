@@ -1,0 +1,27 @@
+<project default="run">
+	
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+	
+    <target name="compile" depends="clean">
+    	<mkdir dir="build/classes"/>    	
+        <javac sourcepath="D:\работа\own\eclipse\Travis-Olga" srcdir="src" destdir="build/classes">
+        	<include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/Exercise.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.ibm.minsk.test.Exercise"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="build/jar/Exercise.jar" fork="true"/>
+    </target>
+
+</project>
