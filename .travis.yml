@@ -1,4 +1,4 @@
 language: java
 script: ant run
 
-services: - docker
+#services: - docker
