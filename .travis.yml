@@ -1,3 +1,11 @@
 language: java
 script: ant run
-services: docker
+
+services: - docker
+
+# To push a particular branch of your repository to a remote registry, use the after_success section of your .travis.yml
+# after_success:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+#    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+#    docker push USER/REPO;
+#    fi
