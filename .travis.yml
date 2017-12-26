@@ -2,16 +2,12 @@ sudo: required
 language: java
 script: ant run
 
-services: 
+services:
   - docker
 
-branches:
-   only:
-      master
-      
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    #docker build -t dlablon/lonrep;  
     docker login -u "dlablon" -p "uasinDH1";
-    docker build -t dlablon/lonrep;  
     docker push dlablon/lonrep;
     fi
