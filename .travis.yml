@@ -11,7 +11,7 @@ branches:
       
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker login -u "dlablon" -p "uasinDH1";
     docker build -t dlablon/lonrep;  
     docker push dlablon/lonrep;
     fi
