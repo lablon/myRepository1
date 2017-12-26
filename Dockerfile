@@ -1,9 +1,7 @@
-#FROM alpine
+FROM alpine: latest
  
-# Copy the "yeah" file from the host
-#COPY yeah /yeah
+# Copy the file from the host
+COPY build/jar/Exercise.jar /
+WORKDIR /
  
-# Update and install vim using apk
-#RUN apk update && apk add vim
- 
-#CMD cat /yeah
+CMD [ "java", "-jar", "Exercise.jar"]
