@@ -1,4 +1,4 @@
-FROM alpine: latest
+FROM alpine:latest
  
 # Copy the file from the host
 COPY build/jar/Exercise.jar /
