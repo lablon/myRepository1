@@ -8,6 +8,6 @@ services:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker build -t dlablon/lonrep .;  
-    docker login -u "dlablon" -p "uasinDH1";
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
     docker push dlablon/lonrep;
     fi
